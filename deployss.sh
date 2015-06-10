@@ -1,8 +1,8 @@
 #!/bin/bash
 
 sudo apt-get update
-sudo apt-get install python-pip
-sudo pip install shadowsocks
+sudo apt-get --assume-yes install python-pip
+yes | sudo pip install shadowsocks
 wget https://raw.githubusercontent.com/duckrxy/deployss/master/shadowsocks.json
 echo "input shadowsocks password:"
 read sspwd
