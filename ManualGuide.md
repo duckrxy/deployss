@@ -27,7 +27,7 @@ sudo apt install shadowsocks-libev
 
 注意以下几点：
 1. server_port 最好修改成其他端口
-2. 修改密码
+2. 修改密码1qaz2wsx
 3. chacha20-ietf-poly1305 对arm架构较为友好，能耗以及资源耗用相对较低，推荐使用
 
 ```
