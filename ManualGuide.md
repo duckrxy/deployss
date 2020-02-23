@@ -46,3 +46,41 @@ sudo apt install shadowsocks-libev
 ## 安装shadowsocks客户端
 [下载页面](https://github.com/shadowsocks/shadowsocks-windows/releases)
 
+## 安装v2ray-plugin插件
+[下载页面](https://github.com/shadowsocks/v2ray-plugin/releases)
+下载v2ray-plugin后，将其解压拷贝至:  
+/usr/bin
+
+## 启用BBR
+1. 修改系统变量
+
+```
+echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+```
+
+2. 保存生效
+```
+sysctl -p
+```
+
+3. 查看内核是否已开启BBR
+```
+sysctl net.ipv4.tcp_available_congestion_control
+```
+显示以下即已开启：
+```
+# sysctl net.ipv4.tcp_available_congestion_control
+net.ipv4.tcp_available_congestion_control = bbr cubic reno
+```
+4. 查看BBR是否启动
+
+```
+lsmod | grep bbr
+```
+显示以下即启动成功：
+```
+
+# lsmod | grep bbr
+tcp_bbr                20480  14
+```
