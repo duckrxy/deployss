@@ -11,3 +11,5 @@ sudo sysctl -p
 
 sysctl net.ipv4.tcp_available_congestion_control
 lsmod | grep bbr
+
+# after updating the config.json, need to restart the service twice
