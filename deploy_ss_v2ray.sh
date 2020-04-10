@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt update
-sudo apt install shadowsocks-libev 
+sudo apt install shadowsocks-libev -y
 wget https://github.com/shadowsocks/v2ray-plugin/releases/download/v1.2.0/v2ray-plugin-linux-amd64-v1.2.0.tar.gz
 tar xvf v2ray-plugin-linux-amd64-v1.2.0.tar.gz
 sudo mv v2ray-plugin_linux_amd64 /usr/bin/v2ray-plugin
